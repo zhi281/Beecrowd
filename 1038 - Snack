@@ -1,0 +1,30 @@
+package main
+
+import (
+	"fmt"
+)
+
+var (
+	x, y  int
+	total float64
+)
+
+func main() {
+	fmt.Scanln(&x, &y)
+	if x == 1 {
+		total = 4 * float64(y)
+		fmt.Printf("Total: R$ %.2f\n", total)
+	} else if x == 2 {
+		total = 4.50 * float64(y)
+		fmt.Printf("Total: R$ %.2f\n", total)
+	} else if x == 3 {
+		total = 5 * float64(y)
+		fmt.Printf("Total: R$ %.2f\n", total)
+	} else if x == 4 {
+		total = 2 * float64(y)
+		fmt.Printf("Total: R$ %.2f\n", total)
+	} else if x == 5 {
+		total = 1.50 * float64(y)
+		fmt.Printf("Total: R$ %.2f\n", total)
+	}
+}
