@@ -1,0 +1,34 @@
+package main
+
+//Wrong answer, probably caused by some rounding
+
+import (
+	"fmt"
+)
+
+var (
+	n1, n2, n3, n4, n5, media float64
+)
+
+func main() {
+	fmt.Scanln(&n1, &n2, &n3, &n4)
+	media = 0.2*n1 + 0.3*n2 + 0.4*n3 + 0.1*n4
+	fmt.Printf("Media: %.1f\n", media)
+	if media >= 7.0 {
+		fmt.Printf("Aluno aprovado.\n")
+	} else if media < 5.0 {
+		fmt.Printf("Aluno reprovado.\n")
+	} else {
+		fmt.Printf("Aluno em exame.\n")
+		fmt.Scanln(&n5)
+		fmt.Printf("Nota do exame: %.1f\n", n5)
+		media = (media + n5) / 2
+		if media >= 5.0 {
+			fmt.Printf("Aluno aprovado.\n")
+			fmt.Printf("Media final: %.1f\n", media)
+		} else {
+			fmt.Printf("Aluno reprovado.\n")
+			fmt.Printf("Media final: %.1f\n", media)
+		}
+	}
+}
