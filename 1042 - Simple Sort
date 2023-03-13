@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+var (
+	a, b, c int
+)
+
+func main() {
+	fmt.Scanln(&a,&b,&c)
+	s := []int{a, b, c}
+	sort.Ints(s)
+	fmt.Println(s[0])
+	fmt.Println(s[1])
+	fmt.Println(s[2])
+	fmt.Printf("\n")
+	fmt.Printf("%v\n", a)
+	fmt.Printf("%v\n", b)
+	fmt.Printf("%v\n", c)
+}
