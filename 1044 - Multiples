@@ -1,0 +1,25 @@
+package main
+ 
+import (
+    "fmt"
+)
+
+var(
+    a, b int
+) 
+func main() {
+    fmt.Scanln(&a,&b)
+if a > b {
+		if a%b == 0 {
+			fmt.Printf("Sao Multiplos\n")
+		} else {
+			fmt.Printf("Nao sao Multiplos\n")
+		}
+	} else {
+		if b%a == 0 {
+			fmt.Printf("Sao Multiplos\n")
+		} else {
+			fmt.Printf("Nao sao Multiplos\n")
+		}
+	}
+}
