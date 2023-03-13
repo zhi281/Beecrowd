@@ -1,0 +1,24 @@
+package main
+ 
+import (
+    "fmt"
+)
+
+var(
+    a, b, c, s1, s2, s3, perimeter, area float64
+) 
+
+func main() {
+    fmt.Scanln(&a, &b, &c)
+	s1 = a + b
+	s2 = a + c
+	s3 = b + c
+	if s1 > c && s2 > b && s3 > a {
+		perimeter = a + b + c
+		fmt.Printf("Perimetro = %.1f\n", perimeter)
+	} else {
+		area = (a + b) * c / 2
+		fmt.Printf("Area = %.1f\n", area)
+	}
+
+}
