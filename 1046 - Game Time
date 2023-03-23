@@ -1,0 +1,24 @@
+package main
+
+import (
+	"fmt"
+)
+
+var (
+	a, b, time int
+)
+
+func main() {
+	fmt.Scanln(&a, &b)
+	if b > a {
+		time = b - a
+		fmt.Printf("O JOGO DUROU %d HORA(S)\n", time)
+	}
+	if b < a {
+		time = 24 - a + b
+		fmt.Printf("O JOGO DUROU %d HORA(S)\n", time)
+	}
+	if b == a {
+		fmt.Printf("O JOGO DUROU 24 HORA(S)\n")
+	}
+}
