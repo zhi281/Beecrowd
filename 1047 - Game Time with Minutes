@@ -1,0 +1,30 @@
+package main
+
+import (
+	"fmt"
+)
+
+var (
+	h1, m1, h2, m2, min1, min2, dif, h, m int
+)
+
+func main() {
+	fmt.Scanln(&h1, &m1, &h2, &m2)
+	min1 = h1*60 + m1
+	min2 = h2*60 + m2
+	if min2 > min1 {
+		dif = min2 - min1
+		h = dif / 60
+		m = dif - h*60
+		fmt.Printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", h, m)
+	}
+	if min2 < min1 {
+		dif = 1440 - min1 + min2
+		h = dif / 60
+		m = dif - h*60
+		fmt.Printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", h, m)
+	}
+	if min1 == min2 {
+		fmt.Printf("O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)\n")
+	}
+}
