@@ -1,0 +1,38 @@
+package main
+
+import (
+	"fmt"
+)
+
+var (
+	salary, new, earn float64
+)
+
+func main() {
+	fmt.Scanln(&salary)
+	if salary <= 400 {
+		new = salary * 1.15
+		earn = new - salary
+		fmt.Printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 15 %%\n", new, earn)
+	}
+	if salary > 400 && salary <= 800 {
+		new = salary * 1.12
+		earn = new - salary
+		fmt.Printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 12 %%\n", new, earn)
+	}
+	if salary > 800 && salary <= 1200 {
+		new = salary * 1.10
+		earn = new - salary
+		fmt.Printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 10 %%\n", new, earn)
+	}
+	if salary > 1200 && salary <= 2000 {
+		new = salary * 1.07
+		earn = new - salary
+		fmt.Printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 7 %%\n", new, earn)
+	}
+	if salary > 2000 {
+		new = salary * 1.04
+		earn = new - salary
+		fmt.Printf("Novo salario: %.2f\nReajuste ganho: %.2f\nEm percentual: 4 %%\n", new, earn)
+	}
+}
