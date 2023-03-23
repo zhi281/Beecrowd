@@ -1,0 +1,41 @@
+package main
+
+import (
+	"fmt"
+	"math"
+	"sort"
+)
+
+var (
+	a, b, c, soma, maior float64
+)
+
+func main() {
+	fmt.Scanln(&a, &b, &c)
+	s := []float64{a, b, c}
+	sort.Float64s(s)
+	maior = s[2]
+	soma = math.Pow(s[0], 2) + math.Pow(s[1], 2)
+	if s[2] >= s[0]+s[1] {
+		fmt.Printf("NAO FORMA TRIANGULO\n")
+	}
+	if s[2] < s[0]+s[1] {
+		if math.Pow(maior, 2) == soma {
+			fmt.Printf("TRIANGULO RETANGULO\n")
+		}
+		if math.Pow(maior, 2) > soma {
+			fmt.Printf("TRIANGULO OBTUSANGULO\n")
+		}
+		if math.Pow(maior, 2) < soma {
+			fmt.Printf("TRIANGULO ACUTANGULO\n")
+		}
+		if s[0] == s[1] && s[0] == s[2] {
+			fmt.Printf("TRIANGULO EQUILATERO\n")
+		}
+		if s[1] == s[0] && s[1] != s[2] {
+			fmt.Printf("TRIANGULO ISOSCELES\n")
+		} else if s[1] == s[2] && s[1] != s[0] {
+			fmt.Printf("TRIANGULO ISOSCELES\n")
+		}
+	}
+}
